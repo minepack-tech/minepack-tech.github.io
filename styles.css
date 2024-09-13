@@ -1,123 +1,250 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #FF2424;
+  --secondary-color: #1ED760;
+  --background-color: #121212;
+  --surface-color: #282828;
+  --text-color: #FFFFFF;
+  --text-secondary: #B3B3B3;
+  --accent-color: #FF0000;
+}
 
 body {
-    font-family: 'Righteous', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
-    overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-    background-color: #FF2424;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 5px solid #d12d2d;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.2em; /* Adjusted for mobile */
-    font-weight: normal;
+  margin: 0;
+  font-size: 2em;
+  font-weight: 700;
 }
 
-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: var(--text-color);
 }
 
 .hero {
-    background: linear-gradient(135deg, #FF2424 0%, #ff6b6b 100%);
-    color: #fff;
-    padding: 20px 10px; /* Adjusted for mobile */
-    text-align: center;
+  background: linear-gradient(to bottom, #1E1E1E, var(--background-color));
+  padding: 160px 0 80px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero h2 {
-    font-size: 2em;
-    margin: 0;
+  font-size: 3em;
+  margin: 0 0 20px;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 .hero p {
-    font-size: 1.1em;
-    margin: 15px 0;
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: var(--text-secondary);
+}
+
+.highlight {
+  color: var(--primary-color);
 }
 
 .download-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    color: #FF2424;
-    background-color: #fff;
-    border: 2px solid #FF2424;
-    border-radius: 25px;
-    font-size: 1.1em;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: inline-block;
+  padding: 15px 30px;
+  color: var(--text-color);
+  background: var(--primary-color);
+  border-radius: 30px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .download-btn:hover {
-    background-color: #FF2424;
-    color: #fff;
-    transform: scale(1.05);
+  background: var(--secondary-color);
+  transform: scale(1.05);
 }
 
-.features {
-    padding: 20px 10px; /* Adjusted for mobile */
-    text-align: center;
-    background-color: #fff;
+.download-btn i {
+  margin-right: 10px;
 }
 
-.features h2 {
-    color: #FF2424;
-    margin-bottom: 30px;
-    font-size: 2em;
+.features, .how-it-works, .benefits {
+  padding: 80px 0;
+}
+
+.features h2, .how-it-works h2, .benefits h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
 }
 
 .feature-grid {
-    display: flex;
-    flex-direction: column; /* Stacks items vertically on mobile */
-    gap: 20px;
-    align-items: center; /* Center elements */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 
 .feature {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 90%; /* Make sure the feature fits mobile screens */
-    max-width: 400px;
+  background: var(--surface-color);
+  border-radius: 8px;
+  padding: 30px;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .feature:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transform: translateY(-10px);
+  background-color: #3E3E3E;
 }
 
-.feature img {
-    width: 100%; /* Responsive image scaling */
-    height: auto;
-    margin-bottom: 15px;
+.feature i {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--primary-color);
 }
 
 .feature h3 {
-    color: #FF2424;
-    margin-top: 0;
+  font-size: 1.5em;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.feature p {
+  color: var(--text-secondary);
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.step {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+.step i {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.step h3 {
+  font-size: 1.3em;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.step p {
+  color: var(--text-secondary);
+}
+
+.benefit-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: var(--surface-color);
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.benefit-list:hover {
+  transform: translateX(10px);
+}
+
+.benefit-list i {
+  font-size: 1.5em;
+  color: var(--primary-color);
+  margin-right: 15px;
 }
 
 footer {
-    background-color: #FF2424;
-    color: #fff;
-    padding: 15px 10px;
-    text-align: center;
+  background: var(--surface-color);
+  padding: 40px 0;
+  text-align: center;
 }
 
 footer p {
-    margin: 0;
+  margin: 0 0 10px;
+  color: var(--text-secondary);
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 0.8em;
+  }
+
+  .hero h2 {
+    font-size: 2.5em;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
 }
