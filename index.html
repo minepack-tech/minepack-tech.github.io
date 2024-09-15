@@ -9,8 +9,8 @@
     <title>Tanishinglar Solve it</title>
     <link rel="stylesheet" href="styles.css"> 
     <meta name="google-site-verification" content="FUM-0LTQllP43KxcBBLieepqJgvrrl4vklCwZs3KZ6o" />
-    <meta name="description" content="Suratlaringizni tahlil qilish orqali tezkor javoblar va yechimlarni taqdim etuvchi Sun'iy Intelektga asoslangan Solve yt ilovasini yuklab oling. Hozir oling!" />
-    <meta name="keywords" content="Solve It, AI app, photo analysis, instant answers, AI-powered app, download AI app, photo solutions, education app, Sun'iy Intelekt, Robot, Kelajak, IT, ChatGPT, Gemini, Claude, Chatbot, Uyga vazifa">
+    <meta name="description" content="Download Solve It, an AI-powered app that provides instant answers and solutions by analyzing your photos. Get it now!" />
+    <meta name="keywords" content="Solve It, AI app, photo analysis, instant answers, AI-powered app, download AI app, photo solutions, education app">
     <meta name="author" content="Minepack Technologies">
 
 </head>
@@ -18,7 +18,7 @@
     <body>
         
         <div class="wrap">
-
+            <div class="line">
         <header>
         <div class="header-left">
             <a href="index.html" class="home">
@@ -27,29 +27,84 @@
             </div>
             
             <nav>
-            <a href="#" class="menu">
-                <img src="D:/segment.svg">
+            <a class="menu">
+                <img src="segment.svg">
                 </a>
                 
             <ul class="ul">
-                <li>  <a href="#" class="close">x</a> </li>
-                <li>  <a href="#" class="about co">About Company</a> </li>
-                <li>  <a href="#" class="download">Download app</a> </li>
-                <li>  <a href="#" class="for nerds">For nerds</a> </li>
-                <li>  <a href="#" class="faq">FAQ</a> </li>
+                <li>  <a  class="close">
+                    <img src="close.svg" class="close_img">
+                    </a></li>
+                <li>  <a href = "#download" class="gts_download">Yuklab olish</a>
+                    
+                </li>
+                <li>  <a href="#intro" class="gts_start">Bosh sahifa</a> </li>
+                <li>  <a href="#images" class="gts_images">Rasimlar</a> </li>
+                <li>  <a href="#bottom" class="gts_how_to_use">Ishlashlar</a> </li>
             </ul>
         </nav>
                 
             
             
         </header>
+     </div>
+
         
         
         <main>
-            <p class="date_of_release">Sentabr 14,2024</p>
+            <p class="date_of_release" id="download">Sentabr 14,2024</p>
             <p class="intro_text">Tanishinglar<br>Solve it</p>
-            <p class="subhead">Solve it is developed by Uzbek developers that are working on the AI sphere for more than 1000 years.And now they managed to make the best AI app on the market</p>
-        <a href="https://www.rustore.ru/catalog/app/com.minepack.solveit" class="download_btn">Download Solve it</a>
+            <div class="download_btn_line">
+                        <a href="#" class="download_btn" id="intro" >Yuklab oling</a>
+            </div>
+            
+            <p class="introduction_full" >Biz ChatGPT, Gemini AI va Klod AI kabi ilg‘or AI modellaridan foydalangan holda suhbat tarzida o‘zaro aloqada bo‘lgan Solve It nomli ilovani ishlab 
+                chiqdik. Dialog formati uni hal qilish uchun 
+                keyingi savollarga javob berish, xatolarini tan olish, noto'g'ri 
+                binolarga e'tiroz bildirish va nomaqbul so'rovlarni rad etish 
+                imkonini beradi.<br><br>
+                Solve Undan foydalanish mutlaqo bepul, abonent to‘lovisiz va foydalanish cheklovlari yo‘q, bu uni hamma uchun ochiq qiladi. Akademik so‘rovlar yoki kundalik qiziqishlar uchunmi, 
+                foydalanuvchilar tezkor yechimlar uchun kuchli AI vositalariga tayanishi mumkin.<br><br>Hozir sinab ko'ring va uning imkoniyatlarini o'rganing!</p>
+            
+            
+            <p class="rasimlar" id="images">Rasimlar</p>
+            <p class="screenshots">Screenshots</p>
+            
+            <div class="images_container" >
+             <img class ="screenshot_one"
+            src="first.jpg">
+                
+                <img class ="screenshot_one"
+            src="second.jpg">
+                
+                <img class ="screenshot_one"
+            src="third.jpg">
+                
+                <img class ="screenshot_two"
+            src="last.jpg">
+            </div>
+            
+            
+            
+           <p class="rasimlar" id="bottom">Ishlashlar</p>
+        <p class="screenshots">Solve it haqida</p>
+        <p class="introduction_full">1-&gt; Savolingiz yoki muammoingizni yuklang yoki suratga oling.<br><br>
+            2-&gt; AI tasvirni tahlil qiladi va so'rovingizni qayta ishlaydi.<br><br>
+            3&gt; Darhol batafsil yechim yoki tushuntirishni oling.            <br><br>
+</p>    
+            
+
+
+            <div class="bottom" id="bottom">
+                <p class="bottom_text">© 2024 Minepack Technologies</p>
+            </div>
+            
+           
+            
+        
+            
+            
+            
         </main>
         
       </div>
@@ -61,14 +116,19 @@
             const menu = document.querySelector('ul');
             const menuBtn = document.querySelector('.menu');
             const closeBtn = document.querySelector('.close');
+    
             
             menuBtn.addEventListener('click', () =>{
                 menu.classList.add('open')
-            })
+            });
             
             closeBtn.addEventListener('click', () =>{
                 menu.classList.remove('open')
-            })
+            });
+            
+            
+            
+           
 
             
             
@@ -80,4 +140,3 @@
     
     
 </html>
-
